@@ -5,12 +5,12 @@ import org.junit.Test;
 public class MainClassTest {
 
     @Test
-    public void testGetClassNumber() {
+    public void  testGetClassString() {
 
         MainClass mainClass = new MainClass();
 
-        int testedClassNumber = mainClass.getClassNumber();
+        String testedClassString = mainClass.getClassString();
 
-        Assert.assertTrue("classNumber is fewer than 45", testedClassNumber > 45);
+        Assert.assertTrue("field classString does not contain words: Hello or hello", testedClassString.contains("Hello") | testedClassString.contains("hello"));
     }
 }
