@@ -5,10 +5,12 @@ import org.junit.Test;
 public class MainClassTest {
 
     @Test
-    public void testGetLocalNumber() {
+    public void testGetClassNumber() {
 
-        int numberBeingChecked = MainClass.getLocalNumber();
+        MainClass mainClass = new MainClass();
 
-        Assert.assertTrue("getLocalNumber method does not return 14", numberBeingChecked == 14);
+        int testedClassNumber = mainClass.getClassNumber();
+
+        Assert.assertTrue("classNumber is fewer than 45", testedClassNumber > 45);
     }
 }
